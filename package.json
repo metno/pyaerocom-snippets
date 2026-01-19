@@ -9,6 +9,14 @@
   "categories": [
     "Snippets"
   ],
+  "author": {
+    "name": "Daniel Heinesen",
+    "email": "danielh@met.no"
+  },
+  "repository": {
+    "url": "https://github.com/metno/pyaerocom-snippets",
+    "type": "git"
+  },
   "contributes": {
     "snippets": [
       {
