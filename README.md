@@ -1,65 +1,27 @@
-# pyaerocom-snippets README
+# Pyaerocom Snippits
 
-This is the README for your extension "pyaerocom-snippets". After writing up a brief description, we recommend including the following sections.
+This is a small package of snippits to make it easier to write pyaerocom configs. 
 
-## Features
+[Pyaerocom](https://github.com/metno/pyaerocom) is a collection of tools for pollution model evaluations, made by the Norwegian Meteorological Institute.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
-For example if there is an image subfolder under your extension project workspace:
+**NOTE: This is a work in progress**
 
-\!\[feature X\]\(images/feature-x.png\)
+##
+Snippets
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### pyaconfig
 
-## Requirements
+Makes the minimal config needed using the standard EMEP reporting configuration
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### emepentry
 
-## Extension Settings
+Creates an EMEP model entry
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### ebasentry
 
-For example:
+Creates an EBAS model entry
 
-This extension contributes the following settings:
+### pyaroentry
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Creates an example Pyaro observation entry. Fills in examples for species, name map and filters. This should be changed by the user, but is there to show how they are used

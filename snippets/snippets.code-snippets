@@ -41,5 +41,55 @@
             "res = ana.run()",
         ],
         "description": "Standard Pyaerocom configuration template"
+    },
+    "Create EMEP Model Entry": {
+        "prefix": "emepentry",
+        "description": "Creates template for EMEP model entry",
+        "body": [
+            "'$1': dict(",
+            "    model_id='EMEP',",
+            "    model_data_dir=$2,",
+            "    gridded_reader_id={'model': 'ReadMscwCtm'},",
+            "),"
+        ]
+    },
+    "Create EBAS Observation Entry": {
+        "prefix": "ebasentry",
+        "description": "Creates EBAS observation entry",
+        "body": [
+            "'$1': dict(",
+            "    obs_id='EBASMC',",
+            "    web_interface_name='$1',",
+            "    obs_vars=['concpm10'],",
+            "    obs_vert_type='Surface',",
+            "    colocate_time=${2|True,False|},",
+            "    ts_type='${3|hourly,daily,monthly|}',",
+            "    obs_filters=${4:BASE_FILTER},",
+            "),"
+        ]
+    },
+    "Create Pyaro Observation Entry": {
+        "prefix": "pyaroentry",
+        "description": "Creates Pyaro observation entry",
+        "body": [
+            "$1 = PyaroConfig(",
+            "    name='$2'",
+            "    reader_id='$3'",
+            "    filename_or_obj_or_url='$4'",
+            "    name_map={'pm10': 'concpm10'}",
+            "    filters={ 'time_bounds': {'startend_include': [('2019-01-01 00:00:00', '2020-01-01 00:00:00')]},",
+            "    'variables': {'include': ['pm10']}})",
+            " ",
+            "'$5': dict(",
+            "    obs_id=$1.name,",
+            "    pyaro_config=$1,",
+            "    web_interface_name='$6',",
+            "    obs_vars=['concpm10'],",
+            "    obs_vert_type='Surface',",
+            "    colocate_time=${7|True,False|},",
+            "    ts_type='${8|hourly,daily,monthly|}',",
+            "    obs_filters=${9:BASE_FILTER},",
+            "),"
+        ]
     }
 }
