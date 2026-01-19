@@ -1,0 +1,20 @@
+{
+  "name": "pyaerocom-snippets",
+  "displayName": "Pyaerocom-snippets",
+  "description": "Small snippets for helping writing Pyaerocom configs",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.108.1"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "python",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
